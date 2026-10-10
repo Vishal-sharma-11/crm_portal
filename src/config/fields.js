@@ -1,0 +1,41 @@
+export const fields = {
+  leads: [
+    { name: "name", label: "Full name", required: true },
+    { name: "phone", label: "Phone number", required: true },
+    { name: "vehicle", label: "Vehicle" },
+    { name: "source", label: "Lead source", options: ["Referral", "Website", "Renewal call", "Walk-in", "Advertisement", "Other"] },
+    { name: "status", label: "Stage", options: ["New", "Contacted", "Quote sent", "Won", "Lost"] },
+    { name: "premium", label: "Estimated premium", type: "number" },
+  ],
+  customers: [
+    { name: "name", label: "Full name", required: true },
+    { name: "phone", label: "Phone number", required: true },
+    { name: "email", label: "Email", type: "email" },
+    { name: "vehicle", label: "Vehicle" },
+    { name: "city", label: "City" },
+  ],
+  policies: [
+    { name: "policyNo", label: "Policy number", required: true },
+    { name: "customer", label: "Customer", required: true },
+    { name: "vehicle", label: "Vehicle", required: true },
+    { name: "insurer", label: "Insurer" },
+    { name: "premium", label: "Annual premium", type: "number" },
+    { name: "expiry", label: "Expiry date", type: "date", required: true },
+    { name: "status", label: "Status", options: ["Active", "Renewal due", "Expired"] },
+  ],
+  payments: [
+    { name: "customer", label: "Customer", required: true },
+    { name: "policyNo", label: "Policy / quote reference" },
+    { name: "amount", label: "Amount due", type: "number", required: true },
+    { name: "paid", label: "Amount received", type: "number" },
+    { name: "dueDate", label: "Due date", type: "date" },
+    { name: "status", label: "Status", options: ["Pending", "Part paid", "Paid"] },
+  ],
+  tasks: [
+    { name: "title", label: "Follow-up", required: true },
+    { name: "related", label: "Customer / vehicle" },
+    { name: "due", label: "Due date", type: "date", required: true },
+    { name: "priority", label: "Priority", options: ["Normal", "High"] },
+    { name: "status", label: "Status", options: ["Open", "Done"] },
+  ],
+};
